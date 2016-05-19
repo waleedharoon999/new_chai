@@ -1,0 +1,12 @@
+{
+  "name": "bower.json",
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "font-awesome": "fontawesome#^4.6.3",
+    "ui-router-extras": "^0.1.2"
+  }
+}
