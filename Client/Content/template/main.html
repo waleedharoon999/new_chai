@@ -1,0 +1,50 @@
+
+<div id="container">
+    <div id="logo-container">
+        <img src="Client/Content/Images/logo.png">
+    </div>
+    <div id="form-heading">
+        <h4>Hi,Login to your account.</h4>
+    </div>
+    <form>
+        <div class="form-group">
+            <label>Email</label>
+            <span class="validation validation1 ng-hide" ng-show="1">Email is required.</span>
+            <span class="caret caret1" ng-show='1'></span>
+            <div class="input-group">
+
+                <input id="login-email" class="form-control" name="email" type="email" required ng-model="id">
+                <span class="glyphicon glyphicon-user"></span>
+
+
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label id="PLabel">Password</label>
+            <span class="caret caret2" ng-show="1"></span>
+            <span class="validation validation2 ng-hide" ng-show="1">Password is required.</span>
+            <div class="input-group">
+                <input id="login-password" class="form-control" name="password" type="password" required>
+                <span class="glyphicon glyphicon-lock"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="login-submit">
+                <button class="btn btn-warning" name="loginButton" ng-click="checkStatus()">Login</button>
+            </div>
+        </div>
+        <div class="form-group forget-password">
+            <a class="forget-text" href="xyz.html">Forgot your password?</a>
+        </div>
+    </form>
+    <div class="footer">
+        Don't have an account?
+        <a href="123.html">Register Now</a>
+    </div>
+    <div class="contact-text" >
+        <a href="123.html" class="about">Learn more about Chai.</a>
+        <span class="about">|</span>
+        <a href="123.html" class="about">Contact Us.</a>
+    </div>
+</div>
