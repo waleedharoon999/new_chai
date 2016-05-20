@@ -1,12 +1,15 @@
 {
   "name": "bower.json",
+  "homepage": "https://github.com/waleedharoon999/new_chai",
+  "authors": [
+    "aallimahmood <aallimahmood5@gmail.com>"
+  ],
   "description": "",
   "main": "",
   "license": "MIT",
-  "homepage": "",
   "dependencies": {
     "bootstrap": "^3.3.6",
     "font-awesome": "fontawesome#^4.6.3",
-    "ui-router-extras": "^0.1.2"
+    "angular-ui-router": "^0.3.0"
   }
 }
