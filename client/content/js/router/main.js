@@ -6,13 +6,13 @@ var app = angular.module('main', ["ui.router"]);
 app.config(function ($stateProvider, $urlRouterProvider,$locationProvider) {
 
     $locationProvider.html5Mode(true);
-    $urlRouterProvider.otherwise("/login");
-    $stateProvider.state('login', {
-        url:"/login",
+    $urlRouterProvider.otherwise("/index");
+    $stateProvider.state('index', {
+        url:"/index",
         views: {
             "loginMain": {
 
-                templateUrl: "Client/Content/template/main.html"
+                templateUrl: "client/content/template/main.html"
             }
 
         }
