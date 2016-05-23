@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en" >
 <head>
+    <base href="/">
     <meta charset="UTF-8">
     <title>Chai</title>
-    <link rel="stylesheet" href="Client/Content/libs/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="Client/Content/Css/styles.css">
-    <script src="Client/Content/libs/angular/angular.min.js"></script>
-    <script src="Client/Content/libs/jquery/dist/jquery.min.js"></script>
-    <script src="Client/Content/libs/angular-ui-router/release/angular-ui-router.min.js"></script>
-    <script src="Client/Content/libs/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="Client/Content/Js/main.js"></script>
+    <link rel="stylesheet" href="client/content/libs/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="client/content/css/styles.css">
+    <script src="client/content/libs/angular/angular.min.js"></script>
+    <script src="client/content/libs/jquery/dist/jquery.min.js"></script>
+    <script src="client/content/libs/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="client/content/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="client/content/js/main.js"></script>
 </head>
-<body background="Client/Content/Images/bg_login.png" ng-app="main">
-<div  ui-view></div>
+<body background="client/content/images/bg_login.png" ng-app="main">
+<div  ui-view="login" ui-sref="index"></div>
 </body>
 </html>
