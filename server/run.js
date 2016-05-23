@@ -5,7 +5,7 @@ http.createServer(function(request, response) {
     var imgExt=request.url.split('.').pop();
     if(request.url.indexOf('.'+imgExt) != -1)
     {
-        fs.readFile('.'+request.url, function (err, data) {
+        fs.readFile('../'+request.url, function (err, data) {
             if(err)
             {
                 response.writeHead(404);
