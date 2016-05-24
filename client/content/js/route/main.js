@@ -5,14 +5,20 @@ myApp.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
     $stateProvider.state('index',
         {
             url: "/index",
-            templateUrl: "client/content/template/login.html",
-            controller: 'loginCtrtl'
+            views: {
+                "loginMain": {
+
+                    templateUrl: "client/content/template/login.html",
+                    controller:'loginCtrtl'
+                }
+
+            }
         })
-        .state('dashboard',
+        /*.state('dashboard',
             {
                 url: "/dashBoard",
                 templateUrl: "client/content/template/dashBoard.html"
 
             }
-        )
+        )*/
 });

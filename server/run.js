@@ -22,9 +22,29 @@ http.createServer(function(request, response) {
     }
     else
     {
-        response.writeHead(404);
-        response.write("Not Found"+request.url);
-        response.end();
+        if(request.url=="/index"){
+            request.url=request.url+".html";
+            var imgExt=request.url.split('.').pop();
+            fs.readFile('../'+request.url, function (err, data) {
+                if(err)
+                {
+                    response.writeHead(404);
+                    response.write("Not Found"+ request.url);
+                }
+                else
+                {
+                    response.writeHead(200, {'Content-Type': 'text/'+imgExt});
+                    response.write(data);
+                }
+
+                response.end();
+            });
+        }
+        else {
+            response.writeHead(404);
+            response.write("Not Found" + request.url);
+            response.end();
+        }
     }
 }).listen(8000);
 

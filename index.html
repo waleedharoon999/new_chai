@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <base href="/">
     <meta charset="UTF-8">
@@ -13,8 +13,9 @@
     <script src="client/content/libs/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="client/content/js/route/main.js"></script>
     <script src="client/content/js/controllers/loginController.js"></script>
+    <script src="service/loginService.js"></script>
 </head>
 <body background="client/content/images/bg_login.png" ng-app="main">
-<div  ui-view></div>
+<div  ui-view="loginMain"></div>
 </body>
 </html>
