@@ -7,5 +7,12 @@ myApp.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
             url: "/index",
             templateUrl: "client/content/template/login.html",
             controller: 'loginCtrtl'
-        });
+        })
+        .state('dashboard',
+            {
+                url: "/dashBoard",
+                templateUrl: "client/content/template/dashBoard.html"
+
+            }
+        )
 });

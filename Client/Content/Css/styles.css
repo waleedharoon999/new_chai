@@ -71,10 +71,12 @@
     top: 2px;
     left: -24px;
     width:117%;
+    padding-left: 28px;
 }
-.input-group #login-password
+.input-group #password,#username
 {
-    top: 0px;
+    top: -3px;
+    padding-left: 28px;
 }
 .form-group #PLabel
 {
@@ -96,7 +98,10 @@
     top:0px;
     pointer-events: none;
     -webkit-transform: translateY(50%);
+    z-index: 3;
+    left: 10%;
     position:absolute;
+    color: #999;
 }
 .footer
 {
