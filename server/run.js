@@ -22,8 +22,9 @@ http.createServer(function(request, response) {
     }
     else
     {
-        if(request.url=="/index"){
-            request.url=request.url+".html";
+        var str=request.url.substr(request.url.indexOf("/")+1);
+
+            request.url=str+".html";
             var imgExt=request.url.split('.').pop();
             fs.readFile('../'+request.url, function (err, data) {
                 if(err)
@@ -39,12 +40,8 @@ http.createServer(function(request, response) {
 
                 response.end();
             });
-        }
-        else {
-            response.writeHead(404);
-            response.write("Not Found" + request.url);
-            response.end();
-        }
+
+
     }
 }).listen(8000);
 

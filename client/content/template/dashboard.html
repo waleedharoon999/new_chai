@@ -1,0 +1,24 @@
+<div id="mainContainer" class="ng-scope">
+    <div id="app-authenticated" class="contain display-flex-row align-items-stretch ng-scope">
+        <aside id="left" class="display-flex-column">
+            <div class="logo">
+                <img src="/client/content/images/logo.png">
+            </div>
+            <div ui-view="sideBar"  class="aside-inner ng-scope">
+
+            </div>
+
+        </aside>
+        <div id="right" class="display-flex-column">
+            <header ui-view="header" id="header" class="">
+
+            </header>
+            <main ui-view="content" id="content" class="display-flex-column ng-scope">
+
+            </main>
+            <footer ui-view="footer" id="footer" class=""><p class="pull-left-footer ng-scope">© 2015 &nbsp;</p>
+
+            </footer>
+        </div>
+    </div>
+</div>
