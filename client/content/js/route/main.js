@@ -6,17 +6,25 @@ myApp.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
         {
             url: "/index",
 
-                    templateUrl: "client/content/template/login.html",
-                    controller:'loginCtrtl'
-
+            templateUrl: "client/content/template/login.html",
+            controller: 'loginCtrtl'
 
 
         })
         .state('dashboard',
             {
                 url: "/dashBoard",
-                templateUrl: "client/content/template/dashBoard.html"
+                views: {
+                    '': {templateUrl: "client/content/template/dashBoard.html"},
+                    'sideBar@dashboard': {templateUrl: "client/content/template/sideBar.html"},
+                    'footer@dashboard': {templateUrl: "client/content/template/footer.html"}
+                }
 
-            }
-        )
+            })
+    /* .state('dashboard.sidebar', {
+     url: '/sideBar',
+     templateUrl: "client/content/template/sideBar.html"
+
+     })
+     */
 });
