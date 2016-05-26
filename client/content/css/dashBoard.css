@@ -1,6 +1,7 @@
 article, aside, footer, header, main, nav, section {
     display: block;
 }
+
 #app-authenticated #right #header, #app-authenticated #right #footer {
 
     -webkit-flex-grow: 0;
@@ -21,13 +22,14 @@ article, aside, footer, header, main, nav, section {
     background: #1f2a30;
     width: 240px;
 }
+
 #app-authenticated #right {
     width: 1% \9;
-    -ms-flex-positive: 1;
     -webkit-flex-grow: 1;
     flex-grow: 1;
     position: relative;
 }
+
 .display-flex-row {
     display: -ms-flexbox;
     display: -webkit-flex;
@@ -45,11 +47,13 @@ article, aside, footer, header, main, nav, section {
     -webkit-flex-direction: column;
     flex-direction: column
 }
+
 .align-items-center {
     -ms-flex-align: center;
     -webkit-align-items: center;
     align-items: center
 }
+
 .align-items-start {
     -ms-flex-align: start;
     -webkit-align-items: flex-start;
@@ -80,48 +84,50 @@ article, aside, footer, header, main, nav, section {
     justify-content: space-between
 }
 
-
 #app-authenticated #left .aside-inner {
     -webkit-flex-grow: 1;
     flex-grow: 1
 }
-.left_side{
+
+.left_side {
     background: #1f2a30;
     width: 240px;
     height: 100%;
     z-index: 5;
 
 }
-.left_new{
+
+.left_new {
     background: #1f2a30;
     width: 240px;
     height: 576px;
 }
 
-.pull-left-footer {
-    float: left !important;
-    margin-top: 10px;
-}
 .pull-right {
     float: right !important;
 }
+
 a svg {
     width: 20px;
     height: 20px;
     vertical-align: middle;
 }
+
 header {
-    box-shadow: 2px 2px 2px rgba(0,0,0,0.1);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
     height: 60px;
 }
+
 header a svg {
     width: 20px;
     height: 20px;
     vertical-align: middle;
 }
+
 header .cursor-default {
     cursor: default;
 }
+
 header a {
     border-left: 1px solid #ddd;
     cursor: pointer;
@@ -129,9 +135,11 @@ header a {
     line-height: 60px;
     padding: 0 20px;
 }
+
 header a {
     text-decoration: none !important;
 }
+
 header a h2 {
     color: #777;
     font-size: 14px;
@@ -141,17 +149,20 @@ header a h2 {
     padding: 0 15px;
     text-transform: capitalize;
 }
+
 svg {
     fill: inherit;
     height: inherit;
     width: inherit;
     vertical-align: middle;
 }
-[ui-view="sideBar"] ul li>a .svg svg {
+
+[ui-view="sideBar"] ul li > a .svg svg {
     fill: inherit;
     height: 25px;
     width: 20px;
 }
+
 .contain {
     position: absolute;
     top: 0;
@@ -160,37 +171,45 @@ svg {
     right: 0;
 }
 
-[ui-view="sideBar"]>ul>li:first-child>a {
+[ui-view="sideBar"] > ul > li:first-child > a {
     border-top-color: transparent;
     margin-top: 10px;
 }
-[ui-view="sideBar"] ul li.active>a {
-    border-left: 2px solid #1ea6e0 ;
+
+[ui-view="sideBar"] ul li.active > a {
+    border-left: 2px solid #1ea6e0;
 }
-[ui-view="sideBar"] li.active>a {
+
+[ui-view="sideBar"] li.active > a {
     border-left-color: #1ea6e0;
 }
 
-[ui-view="sideBar"] ul li:hover>a, [ui-view="sideBar"] ul li.active>a {
+[ui-view="sideBar"] ul li:hover > a, [ui-view="sideBar"] ul li.active > a {
     color: white;
-    fill: white;}
+    fill: white;
+}
+
 [ui-view="sideBar"] {
     overflow-y: auto;
 }
+
 [ui-view="sideBar"] ul li:hover, [ui-view="sideBar"] ul li.active {
     background: #121b1f;
 }
+
 [ui-view="sideBar"] ul li {
     display: block;
 }
-[ui-view="sideBar"]>ul>li>a {
-    border-bottom: 1px solid rgba(0,0,0,0.7);
-    border-top: 1px solid rgba(255,255,255,0.1);
+
+[ui-view="sideBar"] > ul > li > a {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.7);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
     line-height: 25px;
     padding: 15px;
     text-transform: uppercase;
 }
-[ui-view="sideBar"] ul li>a {
+
+[ui-view="sideBar"] ul li > a {
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -204,17 +223,24 @@ svg {
     text-decoration: none;
     word-wrap: break-word;
 }
+
 img {
     vertical-align: middle;
 }
+
 img {
     border: 0;
 }
+
 .logo {
+    -webkit-flex-grow: 0;
+    flex-grow: 0;
+    -webkit-flex-shrink: 0;
+    flex-shrink: 0;
     background: #1ea6e0;
-    border-radius: 6px 6px 0 0;
-    padding: 12px 20px 20px
+    padding: 12px 20px 20px;
 }
+
 ul, menu, dir {
     display: block;
     list-style-type: disc;
@@ -224,9 +250,332 @@ ul, menu, dir {
     -webkit-margin-end: 0px;
     -webkit-padding-start: 0px;
 }
+
 footer {
     background-color: #FFFFFF;
     font-size: 12px;
     padding: 10px 40px;
     color: #777;
+}
+footer a {
+    color: #777;
+    font-weight: 400;
+}
+.pull-left-footer {
+    float: left !important;
+    margin-top: 10px;
+}
+footer p {
+    margin: 0;
+}
+footer ul a {
+    color: #777;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+#app-authenticated #right #content {
+    -webkit-flex-grow: 1;
+    flex-grow: 1;
+    padding: 40px 40px 0;
+    overflow-y: auto;
+}
+#app-authenticated #right #content #content-inner {
+    -ms-flex-positive: 1;
+    -webkit-flex-grow: 1;
+    flex-grow: 1;
+    position: relative;
+}
+.alert-info {
+    background-color: #d9edf7;
+    border-color: #bce8f1;
+    color: #31708f;
+}
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+#logfile-upload, #logstash-upload {
+    color: #777;
+    position: relative;
+}
+#logfile-upload .sub-message {
+    margin-bottom: 2em;
+}
+#logfile-upload .sub-message, #logstash-upload .sub-message {
+    font-size: 13px;
+}
+p {
+    margin: 0 0 10px;
+}
+.form-group {
+    position: relative;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+form {
+    text-align: left;
+}
+#logfile-upload .form-inline .form-control {
+    border-radius: 4px;
+}
+#logfile-upload .form-control {
+    width: 260px;
+    height: 35px;
+    border-radius: 4px;
+    margin-left: -28px;
+}
+
+    .form-inline .form-control {
+        display: inline-block;
+        width: auto;
+        vertical-align: middle;
+    }
+    .form-control {
+        font-size: 13px;
+    }
+    .form-control {
+        display: block;
+        width: 100%;
+        height: 38px;
+        padding: 8px 10px;
+        font-size: 14px;
+        line-height: 1.42857;
+        color: #777;
+        background-color: #fff;
+        background-image: none;
+        border: 1px solid #ccc;
+        border-radius: 0;
+        -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+        box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+        -webkit-transition: border-color ease-in-out 0.15s,box-shadow ease-in-out 0.15s;
+        -o-transition: border-color ease-in-out 0.15s,box-shadow ease-in-out 0.15s;
+        transition: border-color ease-in-out 0.15s,box-shadow ease-in-out 0.15s;
+    }
+    input, button, select, textarea {
+        font-family: inherit;
+        font-size: inherit;
+        line-height: inherit;
+    }
+    button, select {
+        text-transform: none;
+    }
+    button, input, optgroup, select, textarea {
+        color: inherit;
+        font: inherit;
+        margin: 0;
+    }
+h1, .title {
+    font-size: 18px;
+    margin: 0 0 20px 0;
+    text-transform: uppercase;
+}
+h1, .h1 {
+    font-size: 36px;
+}
+h1, .h1, h2, .h2, h3, .h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
+}
+h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+}
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+h1 {
+    display: block;
+    font-size: 2em;
+    -webkit-margin-before: 0.67em;
+    -webkit-margin-after: 0.67em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
+}
+h1:after, .title:after {
+    border-bottom: 3px solid #1ea6e0;
+    border-radius: 4px;
+    content: '';
+    display: block;
+    margin-top: 10px;
+    width: 82px;
+}
+.btn-primary:hover, .btn-primary:focus, .btn-primary.focus, .btn-primary:active, .btn-primary.active, .open>.btn-primary.dropdown-toggle {
+    color: #fff;
+    background-color: #1c9cd3;
+    border-color: transparent;
+}
+.btn:hover, .btn:focus, .btn.focus {
+    color: #777;
+    text-decoration: none;
+}
+.btn-lg {
+    font-size: 14px;
+    border-radius: 3px;
+}
+.btn {
+    font-size: 13px;
+}
+#logfile-upload .btn-upload {
+    padding-left: 19.2px;
+    padding-right: 27.2px;
+    padding-top: 11px;
+    margin-left: -28px;
+    width: 156px;
+}
+
+.btn-lg {
+    padding: 10px 24px;
+    font-size: 18px;
+    line-height: 1.33333;
+    border-radius: 6px;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #1ea6e0;
+    border-color: transparent;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+}
+input, button, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+button, select {
+    text-transform: none;
+}
+button {
+    overflow: visible;
+}
+button, input, optgroup, select, textarea {
+    color: inherit;
+    font: inherit;
+    margin: 0;
+}
+
+.btn {
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: 500;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 8px 15px;
+    font-size: 14px;
+    line-height: 1.42857;
+    border-radius: 4px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+    -webkit-appearance: button;
+    cursor: pointer;
+}
+button, select {
+    text-transform: none;
+}
+button {
+    overflow: visible;
+}
+button, input, optgroup, select, textarea {
+    color: inherit;
+    font: inherit;
+    margin: 0;
+}
+.col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, [ch-configure-logstash]  .form-group .input-group, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+    float: left;
+}
+.col-md-5 {
+    width: 41.66667%;
+}
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, [ch-configure-logstash] .form-group .input-group, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+input[type="checkbox" ] {
+    -webkit-appearance: checkbox;
+    box-sizing: border-box;
+}
+
+input[type="radio" ], input[type="checkbox" ] {
+    background-color: initial;
+    margin: 3px 0.5ex;
+    padding: initial;
+    border: initial;
+}
+
+input {
+    -webkit-appearance: textfield;
+    background-color: white;
+    border-image-source: initial;
+    border-image-slice: initial;
+    border-image-repeat: initial;
+    -webkit-rtl-ordering: logical;
+    -webkit-user-select: text;
+    cursor: auto;
+    padding: 1px;
+    border-width: 2px;
+    border-style: inset;
+    border-color: initial;
+}
+#logfile-upload .save-preferences {
+    font-weight: 500;
+    font-style: italic;
+    display: inline;
+    cursor: pointer;
+    margin-left: -28px;
+}
+#logfile-upload label, #logstash-upload label {
+    display: block;
+    font-weight: normal;
+    font-size: 90%;
+}
+form label {
+    color: #848484;
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: .25em;
+}
+label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+b, strong {
+    font-weight: bold;
+}
+.integration-form {
+    background: #eee;
+    margin-bottom: 60px;
+    padding: 30px;
+}
+.btn-deployment-right {
+    position: absolute;
+    top: 77px;
+    right: 0;
+}
+.account-sharing .form-group {
+    margin-top: 25px;
 }

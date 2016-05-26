@@ -1,0 +1,101 @@
+<ch-list-configure-logstash logstash="logstashVm.logstash" class="ng-scope ng-isolate-scope">
+    <div ng-if="logListVm.logstash.length >=0" ch-configure-logstash="" class="ng-scope ng-isolate-scope"><div class="integration-form">
+        <form class="row ng-invalid ng-invalid-required ng-dirty ng-valid-parse" name="logstashSingleVm.logstashForm" ng-submit="logstashSingleVm.logstashForm.$valid &amp;&amp; logstashSingleVm.submit()" novalidate="">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <span ng-show="logstashSingleVm.logstashForm.$submitted &amp;&amp; logstashSingleVm.logstashForm.elasticsearchIp.$error.required" class="validation-error ng-hide">Elasticsearch IP is required</span>
+                    <label >Elasticsearch IP</label>
+                    <input class="form-control ng-pristine ng-untouched ng-invalid ng-invalid-required" type="text" name="elasticsearchIp" ng-model="logstashSingleVm.logstash.elasticsearchIp" ng-readonly="logstashSingleVm.logstash.id &amp;&amp; logstashSingleVm.logstash.role !== 'owner'" placeholder="OpenStack elasticsearch IP" required="">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label >Openstack Release</label>
+                    <ch-os-version-dropdown ng-readonly="logstashSingleVm.logstash.id &amp;&amp; logstashSingleVm.logstash.role !== 'owner'" model="logstashSingleVm.logstash.osRelease" field-name="osRelease" class="ng-isolate-scope"><select name="osRelease" class="form-control ng-pristine ng-untouched ng-valid" ng-model="osvVm.model" ng-disabled="osvVm.readonly">
+                        <option value="">Choose a version</option>
+
+                        <option value="devstack-icehouse">Devstack - Icehouse</option>
+                        <option value="devstack-juno">Devstack - Juno</option>
+                        <option value="devstack-kilo">Devstack - Kilo</option>
+                        <option value="devstack-liberty">Devstack - Liberty</option>
+                        <option value="devstack-mitaka">Devstack - Mitaka</option>
+
+                        <option value="icehouse">Icehouse</option>
+                        <option value="juno">Juno</option>
+                        <option value="kilo">Kilo</option>
+                        <option value="liberty">Liberty</option>
+                        <option value="redhat-icehouse">Red Hat - Icehouse</option>
+                        <option value="redhat-juno">Red Hat - Juno</option>
+
+                        <option value="redhat-liberty">Red Hat - Liberty</option>
+                    </select>
+                    </ch-os-version-dropdown>
+                </div>
+            </div>
+
+            <div class="col-md-2">
+                <div class="form-group">
+                    <span ng-show="logstashSingleVm.logstashForm.$submitted &amp;&amp; logstashSingleVm.logstashForm.debugLevel.$error.required" class="validation-error ng-hide">Debug level is required</span>
+                    <label >Debug Level</label>
+
+                    <select name="debugLevel" ng-model="logstashSingleVm.logstash.debugLevel" ng-readonly="logstashSingleVm.logstash.id &amp;&amp; logstashSingleVm.logstash.role !== 'owner'" class="form-control ng-pristine ng-untouched ng-valid ng-valid-required" ng-options="debugLevel.value as debugLevel.label for debugLevel in logstashSingleVm.debugLevels" required=""><option label="true" value="boolean:true" selected="selected">true</option><option label="false" value="boolean:false">false</option></select>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="form-group">
+                    <span ng-show="logstashSingleVm.logstashForm.$submitted &amp;&amp; logstashSingleVm.logstashForm.username.$error.required" class="validation-error ng-hide">Username is required</span>
+                    <label >Username</label>
+                    <input class="form-control ng-untouched ng-dirty ng-valid-parse ng-valid ng-valid-required" type="text" name="username" ng-model="logstashSingleVm.logstash.username" ng-readonly="logstashSingleVm.logstash.id &amp;&amp; logstashSingleVm.logstash.role !== 'owner'" placeholder="OpenStack Username" required="" style="">
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="form-group">
+                    <span ng-show="logstashSingleVm.logstashForm.$submitted &amp;&amp; logstashSingleVm.logstashForm.password.$error.required" class="validation-error ng-hide">Password is required</span>
+                    <label >Password</label>
+                    <input class="form-control ng-untouched ng-valid ng-valid-required ng-dirty ng-valid-parse" type="password" name="password" ng-model="logstashSingleVm.logstash.password" ng-readonly="logstashSingleVm.logstash.id &amp;&amp; logstashSingleVm.logstash.role !== 'owner'" placeholder="OpenStack Password" required="" style="">
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <ch-custom-format-strings ng-disabled="logstashSingleVm.logstash.id &amp;&amp; logstashSingleVm.logstash.role !== 'owner'" model1="logstashSingleVm.logstash.loggingExceptionPrefix" field-name1="loggingExceptionPrefix" model2="logstashSingleVm.logstash.loggingDebugFormatSuffix" field-name2="loggingDebugFormatSuffix" model3="logstashSingleVm.logstash.loggingDefaultFormatString" field-name3="loggingDefaultFormatString" model4="logstashSingleVm.logstash.loggingContextFormatString" field-name4="loggingContextFormatString" class="ng-isolate-scope"><div ng-click="cfsVm.showCustomFormatStrings = !cfsVm.showCustomFormatStrings" class="expand-collapse">
+                    <!-- ngIf: cfsVm.showCustomFormatStrings --><i ng-if="cfsVm.showCustomFormatStrings" class="ng-scope">−</i><!-- end ngIf: cfsVm.showCustomFormatStrings -->
+                    <!-- ngIf: !cfsVm.showCustomFormatStrings -->
+                    <span>Custom format strings</span>
+                </div>
+                    <div ng-show="cfsVm.showCustomFormatStrings" class="form-group custom-formats">
+
+                        <div class="input-group">
+                            <label >logging_exception_prefix</label>
+                            <input type="text" name="loggingExceptionPrefix" class="form-control ng-pristine ng-untouched ng-valid" ng-model="cfsVm.model1" ng-readonly="cfsVm.readonly">
+                        </div>
+
+                        <div class="input-group">
+                            <label >logging_debug_format_suffix</label>
+                            <input type="text" name="loggingDebugFormatSuffix" class="form-control ng-pristine ng-untouched ng-valid" ng-model="cfsVm.model2" ng-readonly="cfsVm.readonly">
+                        </div>
+                        <div class="input-group">
+                            <label >logging_default_format_string</label>
+                            <input type="text" name="loggingDefaultFormatString" class="form-control ng-pristine ng-untouched ng-valid" ng-model="cfsVm.model3" ng-readonly="cfsVm.readonly">
+                        </div>
+                        <div class="input-group">
+                            <label >logging_context_format_string</label>
+                            <input type="text" name="loggingContextFormatString" class="form-control ng-pristine ng-untouched ng-valid" ng-model="cfsVm.model4" ng-readonly="cfsVm.readonly">
+                        </div>
+                    </div>
+                </ch-custom-format-strings>
+            </div>
+
+            <div class="col-md-12">
+                <button type="submit" class="btn btn-primary ng-binding ng-isolate-scope" ch-button-spinner="logstashSingleVm.waitSave" ng-class="logstashSingleVm.wait ? 'disabled': ''" ng-disabled="logstashSingleVm.logstash.role !== 'owner' &amp;&amp; logstashSingleVm.logstash.id">
+                    Save
+                </button>
+                <button type="button" class="btn btn-default pull-right ng-isolate-scope ng-hide" ch-button-spinner="logstashSingleVm.waitDelete" ng-show="logstashSingleVm.logstash.id" ng-click="logstashSingleVm.remove()" ng-disabled="logstashSingleVm.logstash.role !== 'owner'" disabled="disabled">
+                    Delete
+                </button>
+            </div>
+        </form>
+    </div>
+    </div>
+</ch-list-configure-logstash>

@@ -1,0 +1,14 @@
+<ch-list-users invite-user-list="accShareVm.inviteUserList" logstash="accShareVm.logstash" class="ng-scope ng-isolate-scope"><div class="account-sharing">
+    <h4>Invite Users</h4>
+    <p class="sub-message">Invite users to share different features of this application.</p>
+    <div>
+        <form class="form-inline ng-pristine ng-invalid ng-invalid-required ng-valid-email" name="inviteUser" novalidate="">
+            <div class="form-group">
+                <input type="email" name="email" class="input-field ng-pristine ng-untouched ng-invalid ng-invalid-required ng-valid-email" ng-required="true" placeholder="Enter email address" ng-model="userListVm.email" required="required">
+                <button class="btn btn-primary btn-sm style ng-isolate-scope" ng-disabled="!inviteUser.$valid" ch-button-spinner="userListVm.waitInvite" ng-click="userListVm.registeredUser()" disabled="disabled">Invite</button>
+            </div>
+        </form>
+    </div>
+
+</div>
+</ch-list-users>

@@ -1,0 +1,74 @@
+<div class="jumbotron">
+    <ch-list-deployments deployments="deplVm.deployments" class="ng-scope ng-isolate-scope">
+    <button type="button" class="  btn btn-primary btn-deployment-right" ng-click="deplListVm.addNew()">Add Deployment
+</button>
+            <div class="integration-form">
+
+        <form class="row ng-invalid ng-invalid-required ng-dirty ng-valid-parse" name="deplSingleVm.deploymentForm" ng-submit="deplSingleVm.deploymentForm.$valid &amp;&amp; deplSingleVm.submit()" novalidate="">
+
+            <div class="col-md-6">
+                <div class="form-group">
+                    <span ng-show="deplSingleVm.deploymentForm.$submitted &amp;&amp; deplSingleVm.deploymentForm.name.$error.required" class="validation-error ng-hide">Deployment name is required</span>
+                    <label >Name</label>
+                    <input class="form-control ng-pristine ng-untouched ng-invalid ng-invalid-required" type="text" name="name" ng-model="deplSingleVm.deployment.name" ng-readonly="deplSingleVm.deployment.id &amp;&amp; deplSingleVm.deployment.role !== 'owner'" placeholder="Deployment Name (e.g. San Jose 1)" required="">
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="form-group">
+                    <span ng-show="deplSingleVm.deploymentForm.$submitted &amp;&amp; deplSingleVm.deploymentForm.tenantName.$error.required" class="validation-error ng-hide">Tenant name is required</span>
+                    <label >Tenant Name</label>
+                    <input class="form-control ng-pristine ng-untouched ng-invalid ng-invalid-required" type="text" name="tenantName" ng-model="deplSingleVm.deployment.tenantName" ng-readonly="deplSingleVm.deployment.id &amp;&amp; deplSingleVm.deployment.role !== 'owner'" placeholder="OpenStack Tenant Name (e.g. Admin)" required="">
+                </div>
+            </div>
+
+            <div class="col-md-8">
+                <div class="form-group">
+                    <span ng-show="deplSingleVm.deploymentForm.$submitted &amp;&amp; deplSingleVm.deploymentForm.authUrl.$error.required" class="validation-error ng-hide">Auth URL is required</span>
+                    <label >Auth Url</label>
+                    <input class="form-control ng-pristine ng-untouched ng-invalid ng-invalid-required" type="text" name="authUrl" ng-model="deplSingleVm.deployment.authUrl" ng-readonly="deplSingleVm.deployment.id &amp;&amp; deplSingleVm.deployment.role !== 'owner'" placeholder="OpenStack Auth Url (e.g. http://123.456.78:5000/v2.0/)" required="">
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label >Region Name</label>
+                    <input class="form-control ng-pristine ng-untouched ng-valid" type="text" name="regionName" ng-model="deplSingleVm.deployment.regionName" ng-readonly="deplSingleVm.deployment.id &amp;&amp; deplSingleVm.deployment.role !== 'owner'" placeholder="Region 1">
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="form-group">
+                    <span ng-show="deplSingleVm.deploymentForm.$submitted &amp;&amp; deplSingleVm.deploymentForm.username.$error.required" class="validation-error ng-hide">Username is required</span>
+                    <label >Username</label>
+                    <input class="form-control ng-untouched ng-dirty ng-valid-parse ng-valid ng-valid-required" type="text" name="username" ng-model="deplSingleVm.deployment.username" ng-readonly="deplSingleVm.deployment.id &amp;&amp; deplSingleVm.deployment.role !== 'owner'" placeholder="OpenStack Username" required="" style="">
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="form-group">
+                    <span ng-show="deplSingleVm.deploymentForm.$submitted &amp;&amp; deplSingleVm.deploymentForm.password.$error.required" class="validation-error ng-hide">Password is required</span>
+                    <label >Password</label>
+                    <input class="form-control ng-untouched ng-dirty ng-valid-parse ng-valid ng-valid-required" type="password" name="password" ng-model="deplSingleVm.deployment.password" ng-readonly="deplSingleVm.deployment.id &amp;&amp; deplSingleVm.deployment.role !== 'owner'" placeholder="OpenStack Password" required="" style="">
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="form-group ng-hide" ng-show="deplSingleVm.deployment.id">
+                    <label >Id</label>
+                    <input class="form-control" type="text" name="deploymentId" value="" readonly="">
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <button type="submit" class="btn btn-primary ng-binding ng-isolate-scope" ch-button-spinner="deplSingleVm.waitSave" ng-disabled="deplSingleVm.deployment.role !== 'owner' &amp;&amp; deplSingleVm.deployment.id">
+                    Save
+                </button>
+                <button type="button" class="btn btn-default pull-right ng-isolate-scope ng-hide" ng-show="deplSingleVm.deployment.id" ch-button-spinner="deplSingleVm.waitDelete" ng-click="deplSingleVm.remove()" ng-disabled="deplSingleVm.deployment.role !== 'owner'" disabled="disabled">Delete
+                </button>
+            </div>
+        </form>
+    </div>
+
+</ch-list-deployments>
+</div>

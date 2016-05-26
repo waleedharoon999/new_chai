@@ -1,13 +1,15 @@
 <div id="main" class="ng-scope">
     <div id="app-authenticated" class="contain display-flex-row align-items-stretch ">
         <aside class="left_side ">
-            <div class="logo"><img src="/client/content/images/logo.png" alt="Chai by Wanclouds"></div>
+            <div  class="logo"><img src="/client/content/images/logo.png" alt="Chai by Wanclouds"></div>
             <div ui-view="sideBar" class="aside-inner "></div>
         </aside>
         <div id="right" class="display-flex-column">
             <header id="header">
                 <div ui-view="header"></div>
             </header>
+            <main ui-view="content" id="content" class="display-flex-column">
+                </main>
             <footer ui-view="footer" id="footer">
                 </footer>
         </div>
