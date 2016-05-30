@@ -18,7 +18,7 @@ app.config(function ($stateProvider, $urlRouterProvider,$locationProvider) {
         url:'/dashboard',
         views:{
             '':{
-                url:"/dashboard",templateUrl: "client/content/template/dashboard.html"
+                templateUrl: "client/content/template/dashboard.html"
             },              
 
             /*'contentInner@dashboard':{url:"/logfile",
@@ -47,6 +47,16 @@ app.config(function ($stateProvider, $urlRouterProvider,$locationProvider) {
         url:'/logfile',
         templateUrl:"client/content/template/logfile.html",
 
+    }).state('dashboard.missingDeployments',{
+        url:'/assurance',
+        templateUrl:"client/content/template/assurance.html",
+
+    }).state('dashboard.integrations',{
+        url:'/integrations',
+        templateUrl:'client/content/template/integration.html'
+    }).state('dashboard.integrations.deployments',{
+        url:'/deployments',
+        templateUrl:'client/content/template/deployments.html'
     });
 
 });

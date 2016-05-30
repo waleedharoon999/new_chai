@@ -310,3 +310,60 @@ a:-webkit-any-link {
     text-decoration: underline;
     cursor: auto;
 }
+.nav-tabs {
+    border-bottom: 1px solid #dddddd;
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    margin-bottom: 2em;
+
+}
+.nav{
+    padding-left: 0;
+    list-style: none;
+}
+.nav li{
+    float: left;
+    margin-bottom: -1px;
+    display: block;
+
+}
+.nav li a{
+    color: #1f2a30;
+    text-decoration: inherit;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.0em;
+}
+h1{
+    font-size: 18px;
+    margin:0 0 20px 0;
+    text-transform: uppercase;
+}
+.btn-deployment-right{
+    position: absolute;
+    width: auto;
+    right: 45px;
+    top: 130px;
+    text-transform: uppercase;
+    background-color: #1ea6e0;
+    border-color: transparent;
+    font-weight: 500;
+}
+.btn-deployment-left{
+
+    width: auto;
+    margin-left: 25px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    background-color: #1ea6e0;
+    border-color: transparent;
+    font-weight: 500;
+}
+.integration-form{
+    background-color:#eeeeee;
+
+}
+.row>div{
+    margin-top: 15px;
+}

@@ -8,7 +8,7 @@ app.controller('myCtrl',['$scope','authenticationService','$state',function ($sc
 
         if(isAuthenticated==true)
         {
-            $state.go('dashboard');
+            $state.go('dashboard.logfile');
         }
     }
 
