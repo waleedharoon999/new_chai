@@ -1,0 +1,20 @@
+<div class="ng-scope">
+    <h1>Integrations</h1>
+    <!--<button type="button" class="btn btn-primary btn-deployment-right" ng-click="deplListVm.addNew()">Add Deployment-->
+    </button>
+    <ul class="nav nav-tabs">
+        <li class="active">
+            <a ui-sref=".deployments" href="/deployments">Deployments</a>
+        </li>
+        <li class="">
+            <a ui-sref=".logStash">Logstash</a>
+        </li>
+        <li class="">
+            <a ui-sref=".users">Users</a>
+        </li>
+    </ul>
+</div>
+<div class="tab-content">
+    <div ui-view class="ng-scope">
+    </div>
+</div>

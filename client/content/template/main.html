@@ -1,0 +1,58 @@
+<div id="logoContainer">
+<div id="container" >
+    <div id="logo-container">
+        <img src="client/content/images/logo.png">
+    </div>
+    <div id="form-heading">
+        <h4>Hi,Login to your account.</h4>
+    </div>
+    <form name="form1" ng-submit="submit()" novalidate class="login-form ng-pristine ng-valid-email ng-invalid ng-invalid-required"  >
+
+        <div class="form-group">
+            <label>Email</label>
+            <span class="validation validation1 ng-hide"  ng-show="form1.$submitted && form1.email.$error.required">Email is required.</span>
+            <span class="caret caret1" ng-show='(form1.$submitted && form1.email.$error.required)||(form1.$submitted&& form1.email.$error.email)'></span>
+            <span class="validation validation1 ng-hide" ng-show="form1.$submitted&& form1.email.$error.email">Please enter a valid email address.</span>
+            <div class="input-group">
+
+                <input id="login-email" class="form-control form-control ng-invalid ng-not-empty ng-dirty ng-invalid-email ng-valid-required ng-touched" name="email" type="email" required ng-model="email1">
+                <span class="glyphicon glyphicon-user"></span>
+
+
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label id="PLabel">Password</label>
+            <span class="caret caret2" ng-show="form1.$submitted&& form1.password.$error.required"></span>
+            <span class="validation validation2 ng-hide" ng-show="form1.$submitted&& form1.password.$error.required">Password is required.</span>
+
+            <div class="input-group">
+                <input  id="login-password" class=" form-control ng-not-empty ng-dirty ng-valid-parse ng-valid ng-valid-required ng-touched" name="password" type="password" required ng-model="pass" >
+                <span class="glyphicon glyphicon-lock"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="login-submit">
+
+                <button  type="submit" class="btn submit btn-warning" name="loginButton"  >Login</button>
+            </div>
+        </div>
+        <div class="form-group forget-password">
+            <a class="forget-text" href="xyz.html">Forgot your password?</a>
+        </div>
+
+    </form>
+
+    <div class="footer">
+        Don't have an account?
+        <a href="123.html">Register Now</a>
+    </div>
+    <div class="contact-text" >
+        <a href="123.html" class="about">Learn more about Chai.</a>
+        <span class="about">|</span>
+        <a href="123.html" class="about">Contact Us.</a>
+    </div>
+
+</div>
+</div>

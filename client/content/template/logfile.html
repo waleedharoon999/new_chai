@@ -1,0 +1,90 @@
+<h1 class="">Log analysis for Openstack</h1>
+<!-- uiView:  --><div ui-view="" class="ng-scope"><!-- ngIf: logUpVm.errorMessage -->
+    <!-- ngIf: logUpVm.successMessage -->
+    <!-- ngIf: logUpVm.warningMessage -->
+    <section class="ng-scope">
+        <div class="row">
+            <div class="col-md-5">
+                <div id="logfile-upload" upload-group="">
+                    <h4>File Upload</h4>
+                    <p class="sub-message" filetype-message="">Upload an OpenStack <b>.txt</b> or <b>.log</b> file to analyze for errors.</p>
+
+                    <form name="logUpVm.uploadForm" class="ng-pristine ng-valid">
+
+                        <div class="form-group form-inline">
+                            <!-- ngIf: logUpVm.projects.length > 1 -->
+                        </div>
+
+                        <div class="form-group form-inline">
+                            <ch-os-version-dropdown model="logUpVm.logfile.openstackVersion" field-name="openstackVersion" class="ng-isolate-scope"><select name="openstackVersion" class="form-control ng-pristine ng-untouched ng-valid" ng-model="osvVm.model" ng-disabled="osvVm.readonly">
+                                <option value="">Choose a version</option>
+
+                                <option value="devstack-icehouse">Devstack - Icehouse</option>
+                                <option value="devstack-juno">Devstack - Juno</option>
+                                <option value="devstack-kilo">Devstack - Kilo</option>
+                                <option value="devstack-liberty">Devstack - Liberty</option>
+                                <option value="devstack-mitaka">Devstack - Mitaka</option>
+
+                                <option value="icehouse">Icehouse</option>
+                                <option value="juno">Juno</option>
+                                <option value="kilo">Kilo</option>
+                                <option value="liberty">Liberty</option>
+                                <option value="redhat-icehouse">Red Hat - Icehouse</option>
+                                <option value="redhat-juno">Red Hat - Juno</option>
+                                <!-- TODO:UNCOMMENT ONCE ADDED TO RELEASE -->
+                                <!--<option value="redhat-kilo">RedHat - Kilo</option>-->
+                                <option value="redhat-liberty">Red Hat - Liberty</option>
+                            </select>
+                            </ch-os-version-dropdown>
+                        </div>
+
+                        <ch-custom-format-strings model1="logUpVm.logfile.loggingExceptionPrefix" field-name1="loggingExceptionPrefix" model2="logUpVm.logfile.loggingDebugFormatSuffix" field-name2="loggingDebugFormatSuffix" model3="logUpVm.logfile.loggingDefaultFormatString" field-name3="loggingDefaultFormatString" model4="logUpVm.logfile.loggingContextFormatString" field-name4="loggingContextFormatString" class="ng-isolate-scope"><div ng-click="cfsVm.showCustomFormatStrings = !cfsVm.showCustomFormatStrings" class="expand-collapse">
+                            <!-- ngIf: cfsVm.showCustomFormatStrings -->
+                            <!-- ngIf: !cfsVm.showCustomFormatStrings --><i ng-if="!cfsVm.showCustomFormatStrings" class="ng-scope">+</i><!-- end ngIf: !cfsVm.showCustomFormatStrings -->
+                            <span>Custom format strings</span>
+                        </div>
+                            <div ng-show="cfsVm.showCustomFormatStrings" class="form-group custom-formats ng-hide">
+
+                                <div class="input-group">
+                                    <label for="">logging_exception_prefix</label>
+                                    <input type="text" name="loggingExceptionPrefix" class="form-control ng-pristine ng-untouched ng-valid" ng-model="cfsVm.model1" ng-readonly="cfsVm.readonly">
+                                </div>
+
+                                <div class="input-group">
+                                    <label for="">logging_debug_format_suffix</label>
+                                    <input type="text" name="loggingDebugFormatSuffix" class="form-control ng-pristine ng-untouched ng-valid" ng-model="cfsVm.model2" ng-readonly="cfsVm.readonly">
+                                </div>
+                                <div class="input-group">
+                                    <label for="">logging_default_format_string</label>
+                                    <input type="text" name="loggingDefaultFormatString" class="form-control ng-pristine ng-untouched ng-valid" ng-model="cfsVm.model3" ng-readonly="cfsVm.readonly">
+                                </div>
+                                <div class="input-group">
+                                    <label for="">logging_context_format_string</label>
+                                    <input type="text" name="loggingContextFormatString" class="form-control ng-pristine ng-untouched ng-valid" ng-model="cfsVm.model4" ng-readonly="cfsVm.readonly">
+                                </div>
+                            </div>
+                        </ch-custom-format-strings>
+
+                        <div class="form-group">
+                            <button type="button" class="btn-upload btn btn-lg btn-primary ng-pristine ng-untouched ng-valid" aria-label="Left Align" ngf-select="" ng-model="logUpVm.file" accept=".txt,.log">
+                                <span class="glyphicon glyphicon-cloud-upload" aria-hidden="true"></span> Upload File
+                            </button>
+                        </div>
+                        <div class="form-group">
+                            <label for="savePreferences" class="save-preferences">
+                                <input id="savePreferences" type="checkbox" name="savePreferences" ng-model="logUpVm.savePreferences" class="ng-pristine ng-untouched ng-valid">
+                                Save my current settings
+                            </label>
+                        </div>
+                    </form>
+
+                    <!-- ngIf: error -->
+                </div>
+            </div>
+
+            <!-- ngIf: logUpVm.showLogstash -->
+
+            <!-- ngIf: logUpVm.showLogstash -->
+        </div>
+    </section>
+</div>

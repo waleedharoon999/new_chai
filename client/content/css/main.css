@@ -1,0 +1,154 @@
+
+#main
+{
+
+    width:100% ;
+    height: 680px;
+}
+#logoContainer
+{
+    width:100% ;
+    height: 680px;
+    background:url("/client/content/images/bg_login.png");
+}
+#container
+{
+    margin-left: 38%;
+    margin-top: 5%;
+    position: absolute;
+    width: 26%;
+    height: 442px;
+    border: 0.5px solid lightgray;
+    border-radius: 6px 6px 6px 6px;
+
+}
+#logo-container
+{
+    background: #1ea6e0;
+    border-radius: 6px 6px 0 0;
+    padding: 12px 20px 20px;
+    width:100%;
+    height:88px;
+}
+#logo-container img
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#form-heading h4
+{
+    text-align: center;
+    width: 100%;
+    height: 25px;
+    padding: 6px 2px;
+}
+.form-group
+{
+    padding: 0px 25px;
+    width: 100%;
+}
+.form-group label
+{
+
+    color: grey;
+    font-size: 13px;
+
+}
+.form-group .validation
+{
+    background-color: #d9534f;
+    font-size: 11px;
+    padding: 0px 8px;
+    position: absolute;
+    right: 25px;
+    z-index:-1;
+}
+.form-group .validation2
+{
+    bottom:210px;
+}
+.form-group .validation1
+{
+    bottom:284px;
+}
+.input-group
+{
+    padding: 0px 25px;
+    top: 2px;
+    left: -24px;
+    width:117%;
+}
+.input-group #login-password,#login-email
+{
+    top: 0px;
+    padding-left: 28px;
+}
+.form-group #PLabel
+{
+    margin-top: 0px;
+}
+.btn
+{
+    width: 100%;
+    height: 40px;
+}
+.form-group .forget-text
+{
+    position: absolute;
+    right:24px;
+    color: grey;
+}
+.input-group .glyphicon
+{
+    top:0px;
+    pointer-events: none;
+    -webkit-transform: translateY(55%);
+    z-index:3;
+    left:10%;
+    color:darkgray;
+    position:absolute;
+
+}
+.footer
+{
+    position: absolute;
+    background: #F1F1F1;
+    border-top: 1px solid #ccc;
+    border-radius: 0 0 6px 6px;
+    color: #999;
+    padding: 25px;
+    bottom: 0px;
+    width: 100%;
+    text-align: center;
+}
+.contact-text
+{
+    position: absolute;
+    bottom: -36px;
+    left:60px;
+    font-size: small;
+}
+.contact-text .about
+{
+    color: #a6a6a6;
+}
+.caret
+{
+    color:#d9534f ;
+    right:25px;
+
+    border-top: 7px dashed;
+    border-top: 7px solid;
+    border-right: 7px solid transparent;
+    border-left: 7px solid transparent;
+    position: absolute;
+}
+.form-group .caret2
+{
+    bottom: 206px;
+}
+.form-group .caret1
+{
+    bottom: 280px;
+}
