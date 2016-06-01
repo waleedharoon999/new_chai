@@ -1,5 +1,6 @@
 <ch-list-configure-logstash logstash="logstashVm.logstash" class="ng-scope ng-isolate-scope">
-    <div ng-if="logListVm.logstash.length >=0" ch-configure-logstash="" class="ng-scope ng-isolate-scope"><div class="integration-form">
+    <div class="">
+        <div class="integration-form">
         <form class="row ng-invalid ng-invalid-required ng-dirty ng-valid-parse" name="logstashSingleVm.logstashForm" ng-submit="logstashSingleVm.logstashForm.$valid &amp;&amp; logstashSingleVm.submit()" novalidate="">
             <div class="col-md-6">
                 <div class="form-group">
@@ -86,7 +87,6 @@
                     </div>
                 </ch-custom-format-strings>
             </div>
-
             <div class="col-md-12">
                 <button type="submit" class="btn btn-primary ng-binding ng-isolate-scope" ch-button-spinner="logstashSingleVm.waitSave" ng-class="logstashSingleVm.wait ? 'disabled': ''" ng-disabled="logstashSingleVm.logstash.role !== 'owner' &amp;&amp; logstashSingleVm.logstash.id">
                     Save

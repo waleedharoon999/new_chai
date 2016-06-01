@@ -8,51 +8,51 @@ myApp.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
             templateUrl: "client/content/template/login.html",
             controller: 'loginCtrtl'
         })
-        .state('dashboard',
+        .state('dashBoard',
             {
                 url: "/dashBoard",
                 views: {
                     '': {
                         templateUrl: "client/content/template/dashBoard.html"
                     },
-                    'sideBar@dashboard': {
+                    'sideBar@dashBoard': {
                         templateUrl: "client/content/template/sideBar.html"
                     },
-                    'header@dashboard': {
+                    'header@dashBoard': {
                         templateUrl: "client/content/template/header.html"
                     },
-                    'footer@dashboard': {
+                    'footer@dashBoard': {
                         templateUrl: "client/content/template/footer.html"
                     },
-                    'content@dashboard': {
+                    'content@dashBoard': {
                         templateUrl: "client/content/template/content.html"
                     }
                 }
-            }).state('dashboard.analytics',
+            }).state('dashBoard.analytics',
         {
             url: '/analytics',
             templateUrl: "client/content/template/analytics.html"
-        }).state('dashboard.compliance',
+        }).state('dashBoard.compliance',
         {
             url: '/compliance',
             templateUrl: "client/content/template/compliance.html"
-        }).state('dashboard.assurance',
+        }).state('dashBoard.assurance',
         {
             url: '/assurance',
             templateUrl: "client/content/template/assurance.html"
-        }).state('dashboard.integrations',
+        }).state('dashBoard.integrations',
         {
             url: '/integrations',
-                    templateUrl: "client/content/template/integrations.html"
-        }).state('dashboard.integrations.deployments',{
-            url:'/deployments',
-            templateUrl:"client/content/template/deployments.html"
-    }).state('dashboard.integrations.logstash',{
-        url:'/logstash',
-        templateUrl:"client/content/template/logstash.html"
-    }).state('dashboard.integrations.users',{
-        url:'/users',
-        templateUrl:"client/content/template/users.html"
+            templateUrl: "client/content/template/integrations.html"
+        }).state('dashBoard.integrations.deployments', {
+        url: '/deployments',
+        templateUrl: "client/content/template/deployments.html"
+    }).state('dashBoard.integrations.logs', {
+        url: '/logs',
+        templateUrl: "client/content/template/logs.html"
+    }).state('dashBoard.integrations.users', {
+        url: '/users',
+        templateUrl: "client/content/template/users.html"
     });
 
 });
